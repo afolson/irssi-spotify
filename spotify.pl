@@ -67,7 +67,7 @@ sub print_error {
 }
 sub getID {
 	my $string = shift;
-	if ($string =~ m/http:\/\/open.spotify.com\/track\/([a-zA-Z0-9]+)\/?/i) {
+	if ($string =~ m/(?:https?:\/\/(?:open|play)\.spotify\.com\/track\/|spotify:track:)([a-zA-Z0-9]+)\/?/) {
 		return $1;
 	}
 	else {
